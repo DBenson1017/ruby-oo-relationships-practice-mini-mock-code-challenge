@@ -1,7 +1,7 @@
 require 'pry'
 require_relative './book'
 require_relative './author'
-require_relative './publication'
+require_relative './BookAuthor'
 
 
 
@@ -33,41 +33,42 @@ wmn_race_class= Book.new('Women Race & Class', 200)
 wake_early= Book.new('Why I Wake Early', 75)
 drowning= Book.new('The Art of Drowning', 60)
 warmth= Book.new('The Warmth of Other Suns', 500)
+authorless = Book.new("No Author Yet", 100)
 
 geo_textbook= Book.new('Geography of the World', 100)
 
 
-tnjc= Publication.new( alexander , jim_crow )
-shakur_auto= Publication.new( shakur , assata )
-h_going= Publication.new( gyasi , homegoing )
-f_water= Publication.new( emezi , freshwater )
-sed_1= Publication.new( sedaris , one_day )
-sed_2= Publication.new( sedaris , courduropy )
-sed_3= Publication.new( sedaris , naked )
-wcr = Publication.new( davis , wmn_race_class )
-w_early = Publication.new( oliver , wake_early )
-collins_1= Publication.new( collins , drowning )
-other_suns= Publication.new( wilkerson , warmth )
-geotext1= Publication.new( author1 , geo_textbook )
-geotext2= Publication.new( author2 , geo_textbook )
-geotext3= Publication.new( author3 , geo_textbook )
-geotext4= Publication.new( author4 , geo_textbook )
+tnjc= BookAuthor.new( alexander , jim_crow )
+shakur_auto= BookAuthor.new( shakur , assata )
+h_going= BookAuthor.new( gyasi , homegoing )
+f_water= BookAuthor.new( emezi , freshwater )
+sed_1= BookAuthor.new( sedaris , one_day )
+sed_2= BookAuthor.new( sedaris , courduropy )
+sed_3= BookAuthor.new( sedaris , naked )
+wcr = BookAuthor.new( davis , wmn_race_class )
+w_early = BookAuthor.new( oliver , wake_early )
+collins_1= BookAuthor.new( collins , drowning )
+other_suns= BookAuthor.new( wilkerson , warmth )
+geotext1= BookAuthor.new( author1 , geo_textbook )
+geotext2= BookAuthor.new( author2 , geo_textbook )
+geotext3= BookAuthor.new( author3 , geo_textbook )
+geotext4= BookAuthor.new( author4 , geo_textbook )
 
 #sample books - word count is atually page count 
 
-jim_crow= Book.new('The New Jim Crown', 336)
-assata = Book.new('Assata: An Autobiography', 320)
-homegoing= Book.new('Homegoing', 325)
-freshwater= Book.new('Freshwater', 240)
-one_day= Book.new('Me Talk Pretty One Day', 100)
-courduropy = Book.new('Dress Your Family in Corduroy and Denim', 50)
-naked= Book.new("Naked", 60)
-wmn_race_class= Book.new('Women Race & Class', 200)
-wake_early= Book.new('Why I Wake Early', 75)
-drowning= Book.new('The Art of Drowning', 60)
-warmth= Book.new('The Warmth of Other Suns', 500)
+# jim_crow= Book.new('The New Jim Crown', 336)
+# assata = Book.new('Assata: An Autobiography', 320)
+# homegoing= Book.new('Homegoing', 325)
+# freshwater= Book.new('Freshwater', 240)
+# one_day= Book.new('Me Talk Pretty One Day', 100)
+# courduropy = Book.new('Dress Your Family in Corduroy and Denim', 50)
+# naked= Book.new("Naked", 60)
+# wmn_race_class= Book.new('Women Race & Class', 200)
+# wake_early= Book.new('Why I Wake Early', 75)
+# drowning= Book.new('The Art of Drowning', 60)
+# warmth= Book.new('The Warmth of Other Suns', 500)
 
-geo_textbook= Book.new('Geography of the World', 100)
+# geo_textbook= Book.new('Geography of the World', 100)
 
 
 

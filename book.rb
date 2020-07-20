@@ -14,8 +14,20 @@ class Book
         @@books 
     end 
 
+    def author 
+        book_author.select do |b_a|
+            b_a.author.last_name 
+        end 
+    end 
 
+    def book_author #join function 
+        BookAuthor.all.select do |b_a| 
+         b_a.book == self 
+            
+        end 
+    end 
 end 
+
 
 #edits 
 # took out :author from att_accessor,from initialize parameter, and from initialize code block variabels

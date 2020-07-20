@@ -1,24 +1,19 @@
  require 'pry'
 
-class Publication
+class BookAuthor
     attr_accessor :author, :book
-    @@all_publications = []
+    @@all = []
     
     
    def initialize(author, book)
     @author = author 
     @book = book
-    Publication.all << self 
+    @@all << self 
    end 
  
    def self.all 
-    @@all_publications
+    @@all
    end 
-
-
-
-   #new publication that makes author as well 
-   #new publication that makes book as well 
 
 
 end 

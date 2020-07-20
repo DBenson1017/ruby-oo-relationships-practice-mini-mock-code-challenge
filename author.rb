@@ -18,41 +18,33 @@ class Author
         @@authors
     end 
 
-    def publications 
-        Publication.all.select do |p|
-            p.author == self 
-        end 
-
-    end 
-
     def books 
-        Publication.all.select do |p|
-            p.author == self
+        book_author.select do |b_a|
+            b_a.book
+        end 
+    end
+
+    def book_author #join method
+        BookAuthor.all.select do |b_a|
+            b_a.author == self
         end 
     end 
-
-    #     Book.all.select do |b|
-    #         if b.author == self 
-    #             b
-    #         end 
-    #     end 
-    # end 
-
-
-#not done 
-    def write_book()
-        Publication.new(self, book_title)
-    end 
-
 
     # def write_book(title, word_count)
-    #    Book.new(self, title, word_count)
-    # end 
+    #     Book.new(self, title, word_count)
+    #  end 
+
+    #write_book version for many to many
+
+    def copywrite(book)
+        BookAuthor.new(self, book)
+    end 
+
 
     def total_words
         words = []
-        self.books.map do |b| 
-            words << b.word_count    
+        book_author.map do |b_a| 
+            words << b_a.book.word_count    
         end 
         words.sum
     end 
@@ -70,7 +62,24 @@ class Author
         end 
         winner 
     end 
+
 end 
+
+    #     Book.all.select do |b|
+    #         if b.author == self 
+    #             b
+    #         end 
+    #     end 
+    # end 
+
+
+
+
+
+    # def write_book(title, word_count)
+    #    Book.new(self, title, word_count)
+    # end 
+
 
 
 =begin 
