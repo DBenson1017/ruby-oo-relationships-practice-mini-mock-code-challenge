@@ -1,5 +1,30 @@
 require 'pry'
 
+class Book
+    attr_accessor :title, :word_count
+    @@books = []
+
+    def initialize(title, word_count)  
+        @title = title 
+        @word_count = word_count
+        Book.all << self 
+    end 
+
+    def self.all 
+        @@books 
+    end 
+
+
+end 
+
+#edits 
+# took out :author from att_accessor,from initialize parameter, and from initialize code block variabels
+
+
+=begin 
+
+Frist version 
+
 class Book 
     attr_accessor :author, :title, :word_count
     @@books = []
@@ -16,17 +41,10 @@ class Book
     end 
 
 
-    # def author 
-    #     self.all.select do |b|
-    #         if b.title == self.title
-    #             self.author 
-    #         end 
-    #     end 
-    # end 
-    # not needed because :author has a reader/writer function by default due to line 4
-
-
 end 
 
+
+
+=end
 
 
